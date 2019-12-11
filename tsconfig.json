@@ -1,0 +1,10 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        // "module": "es6",
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "outDir": "./dist", // 输出目录
+     }
+ }

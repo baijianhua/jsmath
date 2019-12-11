@@ -10,18 +10,18 @@
 //使用VsCode, JsDoc, Js Refactor, Darcula Theme
 
 /**js还是太蹩脚了，
- * 没有类型系统，要虚拟一个，
+ * 没有类型系统，要用JsDoc虚拟一个，
  * 没有变量是否定义的检查，
  * 没有private
+ * 参数无法检查类型
  */
 
 /**@type {HTMLCanvasElement} */        
 let canvas ;
 /**@type {CanvasRenderingContext2D} */ 
 let ctx ;
-window.onload = main;
 
-class Point{
+export class Point{
     /**
      * 
      * @param {number} x 
@@ -33,7 +33,7 @@ class Point{
     }
 }
 
-class Coord{
+export class Coord{
     /**@type {number} */  marginInPixel = 5;
     /**@type {number} */  pxPerUnit = 20;
     /**@type {number} */  minX = -5;
@@ -126,15 +126,7 @@ class Coord{
         return new Point(this._baseYinPx+(x)*this.pxPerUnit,this._baseXinPx-(y)*this.pxPerUnit);      
     }
 }
-let coord = new Coord();
 
-
-function main(){
-    console.log("document is ready");
-    canvas  = document.getElementById("canvas");
-    ctx = canvas.getContext("2d");
-    coord.paint();
-}
 
 function button_clicked(){
     console.log("button clicked");
@@ -154,4 +146,98 @@ function button_clicked(){
 //绘制坐标轴，起点、边距、刻度线
 function drawAxis(){
 
+}
+
+
+
+export class Matrix{
+    /**@type {number} */  _row = 3;
+    /**@type {number} */  _col = 3;
+
+
+    /**
+     * 
+     * @param {number} row 
+     * @param {number} col 
+     * @param {number|string} val 
+     */
+    constuctor(row,col,val){
+        this._row = row;
+        this._col = col;
+    }
+
+    /**
+     * 取元素
+     * @param {*} row 
+     * @param {*} col 
+     * @returns {number|string}
+     */
+    get(row,col){}
+
+    /**转置
+     * @returns {Matrix}
+     */
+    T(){
+
+    }
+
+    /**逆矩阵
+     * @returns {Matrix}
+     */
+    Inverse(){
+
+    }
+}
+
+//其实向量也是矩阵
+export class Vector{
+    /**@type {number} */  _count = 0;
+    /**@type {Array<number|string>} */  _vals = 0;
+    constuctor(count){
+        this._count = count;
+        this._vals = new Array(count);
+    }
+    /**
+     * @param {number} index 
+     * @returns {number|string}
+     */
+    get(index){
+        return this._vals[index];
+    }
+
+    /**
+     * 
+     * @param {number} index 
+     * @param {number|string} val 
+     */
+    set(index,val){
+        this._vals[index] = val;
+    }
+    /**
+     * @returns {Matrix}
+     */
+    vectorProduct(){
+
+    }
+    
+    /**
+     * @returns {Matrix}
+     */
+    cartesianProduct(){
+
+    } 
+    /**
+     * @param {number} v
+     * @returns {number}
+     */
+    innerProdut(v){
+        r
+    }
+    /**
+     * @param {number} v
+     * @returns {number}
+     */
+    matrixProduct(v){
+
+    }
 }
