@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var Vector = /** @class */ (function () {
     function Vector(count) {
         this.count = count;
@@ -13,5 +11,4 @@ var Vector = /** @class */ (function () {
     };
     return Vector;
 }());
-exports.Vector = Vector;
 //# sourceMappingURL=tslib.js.map

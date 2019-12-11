@@ -12,5 +12,5 @@ class Vector{
     }
 }
 
-export {Vector};
+
 
