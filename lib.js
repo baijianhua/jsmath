@@ -127,16 +127,6 @@ export class Coord{
     }
 }
 
-
-
-
-//绘制坐标轴，起点、边距、刻度线
-function drawAxis(){
-
-}
-
-
-
 export class Matrix{
     /**@type {number} */  _row = 3;
     /**@type {number} */  _col = 3;
