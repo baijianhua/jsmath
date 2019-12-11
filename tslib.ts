@@ -1,3 +1,4 @@
+//can not use export
 class Vector{
     private vals = new Array<number|string>();
     constructor(private count:number){

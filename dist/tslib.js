@@ -1,3 +1,4 @@
+//can not use export
 var Vector = /** @class */ (function () {
     function Vector(count) {
         this.count = count;

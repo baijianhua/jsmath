@@ -1,4 +1,6 @@
-// import {Vector} from "./tslib"
+// import {Vector} from "./tslib" //can not use this. won't work
+console.log("haha");
+
 function tsmain(){
     let v = new Vector(2);
     v.set(1,"a");
@@ -10,5 +12,8 @@ function tsmain(){
     coord.paint();
 }
 
-console.log("haha");
 
+
+function button_clicked(){
+    console.log("button clicked");
+}

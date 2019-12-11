@@ -1,4 +1,5 @@
-// import {Vector} from "./tslib"
+// import {Vector} from "./tslib" //can not use this. won't work
+console.log("haha");
 function tsmain() {
     var v = new Vector(2);
     v.set(1, "a");
@@ -8,5 +9,7 @@ function tsmain() {
     var coord = new Coord();
     coord.paint();
 }
-console.log("haha");
+function button_clicked() {
+    console.log("button clicked");
+}
 //# sourceMappingURL=tsmain.js.map

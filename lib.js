@@ -128,19 +128,6 @@ export class Coord{
 }
 
 
-function button_clicked(){
-    console.log("button clicked");
-    console.log(JSON.stringify(toScreenPoint(1,2)));
-    let gd = ctx;
-
-    gd.beginPath();
-    gd.lineWidth=1;
-    gd.lineCap="butt";
-    gd.moveTo(50,50)
-    gd.lineTo(150,50)
-    gd.stroke();
-    gd.closePath();
-}
 
 
 //绘制坐标轴，起点、边距、刻度线
